@@ -8,6 +8,8 @@ environment:
   flutter: '>=2.2.0'
 
 dependencies:
+
+  measured_size: ^1.0.0
   # Plugin for parsing html
   html: '>=0.15.0 <1.0.0'
 

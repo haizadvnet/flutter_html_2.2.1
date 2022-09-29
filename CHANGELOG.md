@@ -1,3 +1,6 @@
+## [2.2.1] - September 29, 2022:
+* Add get html size
+
 ## [2.2.1] - December 8, 2021:
 * Allow styling on ruby tags
 * Allow width/height/alignment styling on table/tr/td tags
