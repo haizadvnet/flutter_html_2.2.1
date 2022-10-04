@@ -9,8 +9,7 @@ environment:
 
 dependencies:
 
-  measured_size: ^1.0.0
-  # Plugin for parsing html
+s  # Plugin for parsing html
   html: '>=0.15.0 <1.0.0'
 
   # Plugins for parsing css

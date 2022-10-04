@@ -19,14 +19,11 @@ export 'package:flutter_html/src/layout_element.dart';
 export 'package:flutter_html/src/replaced_element.dart';
 export 'package:flutter_html/src/styled_element.dart';
 export 'package:flutter_html/src/navigation_delegate.dart';
-import 'package:measured_size/measured_size.dart';
 //export style api
 export 'package:flutter_html/style.dart';
 
 class Html extends StatelessWidget {
 
-
-  final void Function(Size) ?currentSize;
 
   /// The `Html` widget takes HTML as input and displays a RichText
   /// tree of the parsed HTML content.
@@ -68,7 +65,6 @@ class Html extends StatelessWidget {
     this.onImageTap,
     this.tagsList = const [],
     this.style = const {},
-    this.currentSize,
     this.navigationDelegateForIframe,
   })  : document = null,
         assert(data != null),
@@ -90,7 +86,6 @@ class Html extends StatelessWidget {
     this.onImageTap,
     this.tagsList = const [],
     this.style = const {},
-    this.currentSize,
     this.navigationDelegateForIframe,
   })  : data = null,
         assert(document != null),
@@ -163,12 +158,6 @@ class Html extends StatelessWidget {
     final double? width = shrinkWrap ? null : MediaQuery.of(context).size.width;
 
     return 
-    MeasuredSize( 
-    onChange: (Size size){
-        if(currentSize != null){
-          currentSize!(size);
-        }
-    },child:
     Container(
       width: width,
       child: HtmlParser(
@@ -190,7 +179,7 @@ class Html extends StatelessWidget {
         tagsList: tagsList.isEmpty ? Html.tags : tagsList,
         navigationDelegateForIframe: navigationDelegateForIframe,
       ),
-    ));
+    );
   }
 }
 

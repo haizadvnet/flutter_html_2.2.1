@@ -1,3 +1,6 @@
+## [2.2.1] - October 04, 2022:
+* Remove get html size
+
 ## [2.2.1] - September 29, 2022:
 * Add get html size
 
